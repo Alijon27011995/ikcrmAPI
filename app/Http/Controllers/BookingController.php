@@ -48,8 +48,7 @@ class BookingController extends Controller
 
     public function index(Request $request)
     {
-        // $data=DB::table('forthebiulder.booking')->get();
-        // dd($data);
+
         // dd($request->all());
         $models = Booking::all();
         $list = [];

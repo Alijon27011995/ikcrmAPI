@@ -49,6 +49,7 @@ class BookingController extends Controller
     public function index(Request $request)
     {
 
+        
         // dd($request->all());
         $models = Booking::all();
         $list = [];

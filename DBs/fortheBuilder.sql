@@ -112,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `chat` (
   KEY `user_from_id` (`user_from_id`),
   KEY `user_to_id` (`user_to_id`),
   KEY `deal_id` (`deal_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS `clients` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
@@ -312,13 +312,13 @@ CREATE TABLE IF NOT EXISTS `notification` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS `notifications` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `user_id` bigint unsigned NOT NULL,
   `relation_id` bigint NOT NULL,
-  `relation_type` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `relation_type` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `is_read` tinyint DEFAULT NULL,
   `read_date` timestamp NULL DEFAULT NULL,
   `is_notify` tinyint DEFAULT NULL,
@@ -329,7 +329,7 @@ CREATE TABLE IF NOT EXISTS `notifications` (
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS `pay_status` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
